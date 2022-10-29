@@ -7,7 +7,11 @@
 package uniandes.dpoo.taller4.interfaz;
 
 import java.awt.*;
+import java.io.File;
+
 import javax.swing.JFrame;
+
+import uniandes.dpoo.taller4.modelo.*;
 
 
 /**
@@ -19,18 +23,98 @@ public class InterfazLuces extends JFrame
 
 	// -----------------------------------------------------------------
     // Atributos
-    // -----------------------------------------------------------------
+    // ----------------------------------------------------------------
 	
-	
+	private Tablero tablero;
+	private Top10 topscores;
 	
 	// -----------------------------------------------------------------
     // Atributos de interfaz
     // -----------------------------------------------------------------
 	private PanelConfig panelConfig;
 	private PanelMenu panelMenu;
-	private PanelJuego panelJuego;
+	private PanelTablero panelTablero;
 	private PanelPuntaje panelPuntaje;
+	private PanelTopScores panelTopScores;
 	
+	// -----------------------------------------------------------------
+    // Constructores
+    // -----------------------------------------------------------------
+	
+	/**
+	 * Crea la interfaz del juego
+	 */
+	public InterfazLuces( )
+	{
+		// archivo CSV con los puntajes guardados 
+		File puntajesGuardados = new File( "/data/top10.csv" );
+		
+		
+		setTitle("LightsOut");
+		setSize( 600, 600 );
+		
+		// Crea el tablero
+		tablero = new Tablero( ); // TODO: añadir tamaño del tablero
+		tablero.desordenar( ); // TODO: poner dificultad
+		tablero.
+		
+		// Crea el top score
+		topscores = new Top10( );
+		topscores.cargarRecords( puntajesGuardados );
+		
+		// Configura la interfaz
+		setLayout( new BorderLayout( ) );
+		// Añade los paneles
+		panelConfig = 	new PanelConfig( );
+		panelMenu = 	new PanelMenu( );
+		panelTablero = 	new PanelJuego( );
+		panelPuntaje = 	new PanelPuntaje( );
+		panelTopScores = new PanelTopScores( );
+		
+		add( panelConfig,	BoderLayout.NORTH );
+		add( panelMenu	,	BoderLayout.EAST );
+		add( panelTablero,	BoderLayout.CENTER );
+		add( panelPuntaje,	BoderLayout.SOUTH );
+		add( panelTopScores, BoderLayout.WEST );
+		
+		// Configuraciones de ventana
+		setResizable( false );
+		setLocationRelativeTo( null );
+		
+		// Configurar ventana para llamar al metodo dispose() al cerrar la ventana
+        setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );	
+	}
+	
+	// -----------------------------------------------------------------
+    // Métodos
+    // -----------------------------------------------------------------
+	
+	/**
+	 * Repinta el tablero
+	 */
+	public void actualizarPanelTablero( )
+	{
+		remove (panelTablero);
+		
+		panelTablero = new PanelTablero( ); // TODO: definir parámetros
+		add( panelTablero, BorderLayout.CENTER );
+		validate( );
+	}
+	
+	
+	/**
+	 * Cierra la aplicación y guarda puntajes
+	 */
+	public void dispose( ) 
+	{
+		System.out.println( "Llamando dispose( ... ) en InterfazLuces (JFrame)" );
+		
+		// sobreescribe el CSV de puntajes
+		File savedScores = new File( "/data/top10.csv" );
+		topscores.salvarRecords( savedScores );
+		
+		super.dispose();
+	}
 	
 	// -----------------------------------------------------------------
     // Main
