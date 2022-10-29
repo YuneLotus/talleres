@@ -10,7 +10,7 @@ public class PanelConfig {
 	
 	JLabel dificultad = new JLabel("Dificultad"); 
 
-	ButtonGroup niveles = new ButtonGroup();
+	
 	
 	JRadioButton facil = new JRadioButton();
 	
@@ -18,21 +18,29 @@ public class PanelConfig {
 	
 	JRadioButton dificil = new JRadioButton();
 	
+	ButtonGroup niveles = new ButtonGroup();
+	
 	niveles.add(facil);
 	niveles.add(medio);
 	niveles.add(dificil);
 	
-	JComboBox<String> lista = new JComboBox<String>();
+
+	String[] opciones = {"5x5", "6x6","7x7"};
+	JLabel size = new JLabel("tamaño");
 	
-	lista.addItem("5X5");
-	lista.addItem("7X7");
-	lista.addItem("9X9");
+	JComboBox<String> lista = new JComboBox<String>(opciones);
+	
+	
+	
+
 	
 	
 	/*Crear el panel
 	 * Añadir cosas al panel
 	 * Crear más labels antes de lo anterior 
 	 * Revisar por qué me marca las cosas como si estuvieran mal
+	 * Hacer panel
+	 * Pintar un rectángulo en el panel
 	 */
 	
 	
