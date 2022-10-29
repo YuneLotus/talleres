@@ -33,8 +33,6 @@ public class PanelConfig {
 	
 	
 
-	
-	
 	/*Crear el panel
 	 * Añadir cosas al panel
 	 * Crear más labels antes de lo anterior 
