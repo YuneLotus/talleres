@@ -26,13 +26,13 @@ public class PanelMenu extends JPanel implements ActionListener {
 	private JButton btnTop10;
 	
 	private JButton btnCambiarJugador;
-	
+
 	//Constructores
 	public PanelMenu (InterfazLuces pPrincipal) { 
 		principal = pPrincipal;
 		
 		setBorder(new TitledBorder ("Menu"));
-		setLayout(new GridLayout(1, 4));
+		setLayout(new GridLayout(4, 1));
 		
 		btnNuevo = new JButton("Nuevo");
 		btnNuevo.setActionCommand(NUEVO);
