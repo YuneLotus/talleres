@@ -67,16 +67,16 @@ public class InterfazLuces extends JFrame
 		setLayout( new BorderLayout( ) );
 		// Añade los paneles
 		panelConfig = 	new PanelConfig( );
-		panelMenu = 	new PanelMenu( );
+		panelMenu = 	new PanelMenu( this );
 		panelTablero = 	new PanelTablero( );
-		panelPuntaje = 	new PanelPuntaje( );
+		panelPuntaje = 	new PanelPuntaje( this );
 		panelTopScores = new PanelTopScores( );
 		
-		add( panelConfig,	BoderLayout.NORTH );
-		add( panelMenu	,	BoderLayout.EAST );
-		add( panelTablero,	BoderLayout.CENTER );
-		add( panelPuntaje,	BoderLayout.SOUTH );
-		add( panelTopScores, BoderLayout.WEST );
+		add( panelConfig,	BorderLayout.NORTH );
+		add( panelMenu	,	BorderLayout.EAST );
+		add( panelTablero,	BorderLayout.CENTER );
+		add( panelPuntaje,	BorderLayout.SOUTH );
+		add( panelTopScores, BorderLayout.WEST );
 		
 		// Configuraciones de ventana
 		setResizable( false );
