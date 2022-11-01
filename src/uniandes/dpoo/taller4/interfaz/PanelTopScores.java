@@ -5,7 +5,8 @@ import java.util.Collection;
 
 import uniandes.dpoo.taller4.modelo.RegistroTop10;
 
-public class PanelTop10 {
+public class PanelTopScores extends JPanel 
+{
 	private InterfazLuces interfaz;
 	
 	/** 
@@ -14,7 +15,7 @@ public class PanelTop10 {
 	 * */
 	
 	@SuppressWarnings("unchecked")
-	public PanelTop10(InterfazLuces interfaz, Collection<RegistroTop10> registros){
+	public PanelTopScores(InterfazLuces interfaz, Collection<RegistroTop10> registros){
 		
 		JList<String> names = new JList<String>();
 		
