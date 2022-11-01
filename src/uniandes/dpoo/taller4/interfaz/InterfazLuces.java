@@ -35,7 +35,7 @@ public class InterfazLuces extends JFrame
 	private PanelMenu panelMenu;
 	private PanelTablero panelTablero;
 	private PanelPuntaje panelPuntaje;
-	private PanelTopScores panelTopScores;
+	private PanelTop10 panelTopScores;
 	
 	// -----------------------------------------------------------------
     // Constructores
