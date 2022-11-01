@@ -54,11 +54,12 @@ public class InterfazLuces extends JFrame
 		setSize( 600, 600 );
 		
 		// Crea el tablero
-		tablero = new Tablero( ); // TODO: añadir tamaño del tablero
-		tablero.desordenar( ); // TODO: poner dificultad
-		tablero.
+		//tablero = new Tablero( ); // TODO: añadir tamaño del tablero
+		//tablero.desordenar( ); // TODO: poner dificultad
+		//tablero.
 		
 		// Crea el top score
+		
 		topscores = new Top10( );
 		topscores.cargarRecords( puntajesGuardados );
 		
@@ -67,7 +68,7 @@ public class InterfazLuces extends JFrame
 		// Añade los paneles
 		panelConfig = 	new PanelConfig( );
 		panelMenu = 	new PanelMenu( );
-		panelTablero = 	new PanelJuego( );
+		panelTablero = 	new PanelTablero( );
 		panelPuntaje = 	new PanelPuntaje( );
 		panelTopScores = new PanelTopScores( );
 		
@@ -92,13 +93,42 @@ public class InterfazLuces extends JFrame
 	/**
 	 * Repinta el tablero
 	 */
-	public void actualizarPanelTablero( )
+	public void actualizarPanelTablero( int tam )
 	{
-		remove (panelTablero);
+		remove( panelTablero );
 		
 		panelTablero = new PanelTablero( ); // TODO: definir parámetros
 		add( panelTablero, BorderLayout.CENTER );
 		validate( );
+	}
+	
+	
+	/**
+	 * Inicializa el tablero
+	 * @param tam Tamaño del tablero
+	 */
+	public void inicializarTablero( int tam ) 
+	{
+		tablero = new Tablero( tam );
+	}
+	
+	
+	/**
+	 * Desordena el tablero
+	 * @param dif Dificultad del tablero
+	 */
+	public void desordenarTablero( int dif )
+	{
+		tablero.desordenar( dif );
+	}
+	
+	
+	/**
+	 * Reinicia el tablero
+	 */
+	public void reiniciarTablero( ) 
+	{
+		tablero.reiniciar( );
 	}
 	
 	
