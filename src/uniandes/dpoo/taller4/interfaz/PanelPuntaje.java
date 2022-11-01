@@ -28,7 +28,7 @@ import javax.swing.event.ListSelectionListener;
 import uniandes.dpoo.taller4.modelo.RegistroTop10;
 import uniandes.dpoo.taller4.modelo.Tablero;
 
-public class panelPuntaje {
+public class PanelPuntaje {
 	//Atributos 
 		private InterfazLuces interfaz;
 		
@@ -37,7 +37,7 @@ public class panelPuntaje {
 		private JTextField txtJugador;
 		
 		//Constructor
-		public panelPuntaje (InterfazLuces pPrincipal) {
+		public PanelPuntaje (InterfazLuces pPrincipal) {
 			interfaz = pPrincipal;
 			JPanel panelInfoJugadas = new JPanel();
 			panelInfoJugadas.setLayout(new BorderLayout());
