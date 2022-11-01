@@ -8,6 +8,8 @@ package uniandes.dpoo.taller4.interfaz;
 
 import java.awt.*;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 
 import javax.swing.JFrame;
 
@@ -35,7 +37,7 @@ public class InterfazLuces extends JFrame
 	private PanelMenu panelMenu;
 	private PanelTablero panelTablero;
 	private PanelPuntaje panelPuntaje;
-	private PanelTop10 panelTopScores;
+	private PanelTopScores panelTopScores;
 	
 	// -----------------------------------------------------------------
     // Constructores
@@ -70,7 +72,7 @@ public class InterfazLuces extends JFrame
 		panelMenu = 	new PanelMenu( this );
 		panelTablero = 	new PanelTablero( );
 		panelPuntaje = 	new PanelPuntaje( this );
-		panelTopScores = new PanelTopScores( );
+		panelTopScores = new PanelTopScores( this, topscores.darRegistros() );
 		
 		add( panelConfig,	BorderLayout.NORTH );
 		add( panelMenu	,	BorderLayout.EAST );
@@ -141,7 +143,15 @@ public class InterfazLuces extends JFrame
 		
 		// sobreescribe el CSV de puntajes
 		File savedScores = new File( "/data/top10.csv" );
-		topscores.salvarRecords( savedScores );
+		try {
+			topscores.salvarRecords( savedScores );
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		super.dispose();
 	}

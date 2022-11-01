@@ -125,8 +125,9 @@ public class PanelConfig extends JPanel implements  ActionListener
         {
             tamSeleccionado = (( String )lista.getSelectedItem( ));
             fila = filaSeleccionada(tamSeleccionado);
-            columna = columnaSeleccionada(tamSeleccionado);
-            interfaz.inicializarTablero(fila, columna);
+            
+            // se supone que 
+            interfaz.inicializarTablero(fila);
         }
        
 	}
@@ -142,30 +143,30 @@ public class PanelConfig extends JPanel implements  ActionListener
 	public int filaSeleccionada(String tamSeleccionado) {
 		
 		int fila = 0;
-		if(tamSeleccionado == "5X5") {
+		if(tamSeleccionado == "5x5") {
 			fila = 5;
 			return fila;
 		}
 		
-		if(tamSeleccionado == "6X6") {
+		if(tamSeleccionado == "6x6") {
 			fila = 6;
 			return fila;
 		}
 		
-		if(tamSeleccionado == "7X7") {
+		if(tamSeleccionado == "7x7") {
 			fila = 7;
 			return fila;
 		}
-		if(tamSeleccionado == "8X8") {
+		if(tamSeleccionado == "8x8") {
 			fila = 8;
 			return fila;
 		}
-		if(tamSeleccionado == "9X9") {
+		if(tamSeleccionado == "9x9") {
 			fila = 9;
 			return fila;
 		}
 		
-		if(tamSeleccionado == "10X10") {
+		if(tamSeleccionado == "10x10") {
 			fila = 10;
 			return fila;
 		}
@@ -227,10 +228,10 @@ public class PanelConfig extends JPanel implements  ActionListener
             interfaz.desordenarTablero(5);
         }
 		if(Medio.equals(nivel.getActionCommand())) {
-			interfaz.desorndearTablero(10);
+			interfaz.desordenarTablero(10);
 		}
 		if(Dificil.equals(nivel.getActionCommand())) {
-			interfaz.desorndearTablero(15);
+			interfaz.desordenarTablero(15);
 		}
 		
 	}
