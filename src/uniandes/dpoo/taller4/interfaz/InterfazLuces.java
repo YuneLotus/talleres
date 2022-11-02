@@ -40,6 +40,7 @@ public class InterfazLuces extends JFrame
 	private PanelTablero panelTablero;
 	private PanelPuntaje panelPuntaje;
 	private PanelTopScores panelTopScores;
+	private DiagCrearJugador dCrearJugador;
 	
 	// -----------------------------------------------------------------
     // Constructores
@@ -57,13 +58,16 @@ public class InterfazLuces extends JFrame
 		setTitle("LightsOut");
 		setSize( 600, 600 );
 		
+		// crea el primer jugador
+		cambiarJugador( );
+		System.out.println("Nombre: " + this.nombre + "\nPuntaje actual: " + this.puntaje_curr + "\n");
+		
 		// Crea el tablero
 		//tablero = new Tablero( ); // TODO: añadir tamaño del tablero
 		//tablero.desordenar( ); // TODO: poner dificultad
 		//tablero.
 		
 		// Crea el top score
-		cambiarJugador();
 		topscores = new Top10( );
 		topscores.cargarRecords( puntajesGuardados );
 		
@@ -147,9 +151,17 @@ public class InterfazLuces extends JFrame
 	/**
 	 * Cambia el jugador que esté jugando actualmente 
 	 */
-	public void cambiarJugador( String nombre ) {
+	public void updateJugador( String nombre ) 
+	{
 		this.nombre = nombre;
 		this.puntaje_curr = 0;
+	}
+	
+	public void cambiarJugador( ) 
+	{
+		// le pide, al inicio del juego, que ingrese nombre de jugador
+		dCrearJugador = new DiagCrearJugador( this );
+		dCrearJugador.setVisible( true );
 	}
 	
 	/**

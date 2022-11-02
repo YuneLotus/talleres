@@ -85,7 +85,7 @@ public class DiagCrearJugador extends JDialog implements ActionListener
         panelNombre.setLayout( new FlowLayout( FlowLayout.RIGHT, 5, 0 ) );
         JLabel etiquetaNombre = new JLabel( "Nombre " );
         txtNombre = new JTextField( );
-        txtNombre.setColumns( 30 );
+        txtNombre.setColumns( 15 );
         panelNombre.add( etiquetaNombre );
         panelNombre.add( txtNombre );
         panelDatos.add( panelNombre );
@@ -112,13 +112,16 @@ public class DiagCrearJugador extends JDialog implements ActionListener
 		String comando = pEvento.getActionCommand();
 		
 		if ( comando.equals( ACEPTAR ) ) {
+			System.out.println("ACEPTAR clickeado\n");
 			nombre = txtNombre.getText( );
 			
 			if (nombre == null || nombre.equals( "" )) { }
 			else 
 			{
-				ventana.cambiarJugador( nombre );
+				ventana.updateJugador( nombre );
+				dispose();
 			}
 		}
+		
 	}
 }
