@@ -28,6 +28,7 @@ import javax.swing.event.ListSelectionListener;
 import uniandes.dpoo.taller4.modelo.RegistroTop10;
 import uniandes.dpoo.taller4.modelo.Tablero;
 
+@SuppressWarnings("serial")
 public class PanelPuntaje extends JPanel 
 {
 	//Atributos 

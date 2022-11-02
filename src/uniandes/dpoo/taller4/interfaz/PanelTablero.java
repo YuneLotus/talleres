@@ -93,7 +93,7 @@ public class PanelTablero extends JPanel implements MouseListener
 		}
 	}
 	
-	
+	/*
 	public void mousePressed(MouseEvent e)  {   
 		int click_x = e.getX();   
 		int click_y = e.getY();   
@@ -103,7 +103,9 @@ public class PanelTablero extends JPanel implements MouseListener
 		this.ultima_fila = casilla[0];   
 		this.ultima_columna = casilla[1];   
 		repaint();  
-	}   
+	} 
+	*/  
+
 	
 	private int[] convertirCoordenadasACasilla(int x, int y)  {  
 		// consigue las dimensiones del tablero
@@ -125,15 +127,13 @@ public class PanelTablero extends JPanel implements MouseListener
 	
 
 	
-	public void mouseClicked( MouseEvent evento )
-	{
-		
-	}
+	public void mouseClicked( MouseEvent evento ) {}
 	
-	public void mouseRestored( MouseEvent evento )
-	{
-		
-	}
+	public void mouseRestored( MouseEvent evento ) {}
+	
+	public void mousePressed( MouseEvent e ) {}
+	
+	public void mouseReleased( MouseEvent e ) {}
 	
 	public void mouseEntered( MouseEvent evento ) {
 		// TODO Auto-generated method stub

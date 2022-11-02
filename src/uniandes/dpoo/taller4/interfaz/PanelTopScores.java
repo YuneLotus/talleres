@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import uniandes.dpoo.taller4.modelo.RegistroTop10;
 
+@SuppressWarnings("serial")
 public class PanelTopScores extends JPanel 
 {
 	private InterfazLuces interfaz;

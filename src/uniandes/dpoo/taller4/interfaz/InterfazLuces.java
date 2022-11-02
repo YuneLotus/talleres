@@ -29,6 +29,7 @@ public class InterfazLuces extends JFrame
 	
 	private Tablero tablero;
 	private Top10 topscores;
+	private RegistroTop10 curr_reg;
 	
 	// -----------------------------------------------------------------
     // Atributos de interfaz
@@ -139,6 +140,14 @@ public class InterfazLuces extends JFrame
 	public void jugarTablero (int fila, int columna ) 
 	{
 		tablero.jugar(fila, columna);
+	}
+	
+	
+	/**
+	 * 
+	 */
+	public void cambiarJugador() {
+		// TODO
 	}
 	
 	
