@@ -29,7 +29,8 @@ public class InterfazLuces extends JFrame
 	
 	private Tablero tablero;
 	private Top10 topscores;
-	private RegistroTop10 curr_reg;
+	private String nombre;
+	private int puntaje_curr;
 	
 	// -----------------------------------------------------------------
     // Atributos de interfaz
@@ -62,7 +63,7 @@ public class InterfazLuces extends JFrame
 		//tablero.
 		
 		// Crea el top score
-		
+		cambiarJugador();
 		topscores = new Top10( );
 		topscores.cargarRecords( puntajesGuardados );
 		
@@ -144,10 +145,10 @@ public class InterfazLuces extends JFrame
 	
 	
 	/**
-	 * 
+	 * Cambia el jugador que esté jugando actualmente 
 	 */
 	public void cambiarJugador() {
-		// TODO
+		
 	}
 	
 	
