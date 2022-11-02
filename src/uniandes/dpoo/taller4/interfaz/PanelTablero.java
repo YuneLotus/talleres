@@ -24,6 +24,11 @@ public class PanelTablero extends JPanel implements MouseListener
     // -----------------------------------------------------------------
 	private Tablero tablero;
 	
+	private int[][] cantidades;
+	
+	private int ultima_fila;
+	
+	private int ultima_columna;
 	// -----------------------------------------------------------------
     // Atributos de interfaz
     // -----------------------------------------------------------------
@@ -93,18 +98,18 @@ public class PanelTablero extends JPanel implements MouseListener
 		}
 	}
 	
-	/*
-	public void mousePressed(MouseEvent e)  {   
-		int click_x = e.getX();   
-		int click_y = e.getY();   
-		int[] casilla = convertirCoordenadasACasilla(click_x, click_y);   
-		cantidades[casilla[0]][casilla[1]]++;   
-		principal.jugar(casilla[0], casilla[1]);   
-		this.ultima_fila = casilla[0];   
-		this.ultima_columna = casilla[1];   
-		repaint();  
-	} 
-	*/  
+	
+	public void mouseClicked(MouseEvent e)  {   
+		int click_x = e.getX();
+		int click_y = e.getY();
+		int[] casilla = convertirCoordenadasACasilla(click_x, click_y);
+		cantidades[casilla[0]][casilla[1]]++;
+		ventana.jugarTablero(casilla[0], casilla[1]);
+		this.ultima_fila = casilla[0];
+		this.ultima_columna = casilla[1];
+		repaint();
+		}
+	  
 
 	
 	private int[] convertirCoordenadasACasilla(int x, int y)  {  
@@ -123,25 +128,29 @@ public class PanelTablero extends JPanel implements MouseListener
 		int columna = (int) (x / anchoCasilla);    
 		return new int[] { fila, columna };  
 		
-	} 
-	
+	}
 
-	
-	public void mouseClicked( MouseEvent evento ) {}
-	
-	public void mouseRestored( MouseEvent evento ) {}
-	
-	public void mousePressed( MouseEvent e ) {}
-	
-	public void mouseReleased( MouseEvent e ) {}
-	
-	public void mouseEntered( MouseEvent evento ) {
+	@Override
+	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("evento mouseEntered");
+		
 	}
-	
-	public void mouseExited( MouseEvent evento ) {
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("evento mouseExited");		
+		
 	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	} 	
 }
