@@ -147,8 +147,25 @@ public class InterfazLuces extends JFrame
 	/**
 	 * Cambia el jugador que esté jugando actualmente 
 	 */
-	public void cambiarJugador() {
-		
+	public void cambiarJugador( String nombre ) {
+		this.nombre = nombre;
+		this.puntaje_curr = 0;
+	}
+	
+	/**
+	 * Devuelve el nombre del jugador actual
+	 */
+	public String getNombreCurr( )
+	{
+		return this.nombre;
+	}
+	
+	/**
+	 * Devuelve el puntaje del jugador actual
+	 */
+	public int getPuntajeCurr( ) 
+	{
+		return this.puntaje_curr;
 	}
 	
 	
