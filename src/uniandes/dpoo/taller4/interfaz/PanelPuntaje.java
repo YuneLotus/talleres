@@ -41,8 +41,8 @@ public class PanelPuntaje extends JPanel
 		//Constructor
 		public PanelPuntaje (InterfazLuces pPrincipal) {
 			interfaz = pPrincipal;
-			JPanel panelInfoJugadas = new JPanel();
-			panelInfoJugadas.setLayout(new BorderLayout());
+			//JPanel panelInfoJugadas = new JPanel();
+			setLayout(new BorderLayout());
 			
 			JPanel panelInfoJugadas1 = new JPanel();
 			panelInfoJugadas1.setLayout(new GridLayout(1, 2));
@@ -51,18 +51,18 @@ public class PanelPuntaje extends JPanel
 			JLabel etiquetaJugadas = new JLabel("Jugadas: ");
 			etiquetaJugadas.setHorizontalAlignment(JLabel.LEFT);
 			panelInfoJugadas1.add(etiquetaJugadas);
-			txtJugadas = new JTextField();
+			txtJugadas = new JTextField( Integer.toString(interfaz.getJugadasCurr( )) );
 			txtJugadas.setEditable(false);
 			panelInfoJugadas1.add(txtJugadas);
 			
-			JLabel etiquetaJugador = new JLabel("Jugadas: ");
+			JLabel etiquetaJugador = new JLabel("Jugador: ");
 			etiquetaJugador.setHorizontalAlignment(JLabel.LEFT);
 			panelInfoJugadas1.add(etiquetaJugador);
-			txtJugador = new JTextField();
+			txtJugador = new JTextField( interfaz.getNombreCurr( ) );
 			txtJugador.setEditable(false);
 			panelInfoJugadas1.add(txtJugador);
 			
-			panelInfoJugadas.add(panelInfoJugadas1, BorderLayout.NORTH);
+			add(panelInfoJugadas1, BorderLayout.NORTH);
 
 		}
 		

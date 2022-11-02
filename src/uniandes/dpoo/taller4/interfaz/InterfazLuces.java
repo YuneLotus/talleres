@@ -30,7 +30,7 @@ public class InterfazLuces extends JFrame
 	private Tablero tablero;
 	private Top10 topscores;
 	private String nombre;
-	private int puntaje_curr;
+	private int puntaje_curr, jugadas_curr;
 	
 	// -----------------------------------------------------------------
     // Atributos de interfaz
@@ -154,6 +154,7 @@ public class InterfazLuces extends JFrame
 	{
 		this.nombre = nombre;
 		this.puntaje_curr = 0;
+		this.jugadas_curr = 0;
 		System.out.println("Nombre: " + this.nombre + "\nPuntaje actual: " + this.puntaje_curr + "\n");
 	}
 	
@@ -178,6 +179,14 @@ public class InterfazLuces extends JFrame
 	public int getPuntajeCurr( ) 
 	{
 		return this.puntaje_curr;
+	}
+	
+	/**
+	 * Devuelve el número de jugadas realizadas
+	 */
+	public int getJugadasCurr( ) 
+	{
+		return this.jugadas_curr;
 	}
 	
 	
