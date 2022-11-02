@@ -85,7 +85,7 @@ public class DiagCrearJugador extends JDialog implements ActionListener
         panelNombre.setLayout( new FlowLayout( FlowLayout.RIGHT, 5, 0 ) );
         JLabel etiquetaNombre = new JLabel( "Nombre " );
         txtNombre = new JTextField( );
-        txtNombre.setColumns( 30/ );
+        txtNombre.setColumns( 30 );
         panelNombre.add( etiquetaNombre );
         panelNombre.add( txtNombre );
         panelDatos.add( panelNombre );
