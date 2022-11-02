@@ -9,11 +9,10 @@ import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionListener;
 
-@SuppressWarnings("serial")
 public class PanelMenu extends JPanel implements ActionListener {
 	private static final String NUEVO = "NUEVO";
 	private static final String REINICIAR = "REINICIAR";
-	private static final String TOP_10 = "TOP-10";
+	
 	private static final String CAMBIAR_JUGADOR = "CAMBIAR JUGADOR";
 	
 	//Atributos
@@ -22,8 +21,6 @@ public class PanelMenu extends JPanel implements ActionListener {
 	private JButton btnNuevo;
 	
 	private JButton btnReiniciar;
-	
-	private JButton btnTop10;
 	
 	private JButton btnCambiarJugador;
 
@@ -46,14 +43,8 @@ public class PanelMenu extends JPanel implements ActionListener {
 		add(btnReiniciar);
 		
 		
-		btnTop10 = new JButton("Top-10");
-		btnTop10.setActionCommand(TOP_10);
-		btnTop10.addActionListener(this);
-		add(btnTop10);
-		
-		
 		btnCambiarJugador = new JButton("Cambiar Jugador");
-		btnCambiarJugador.setActionCommand(TOP_10);
+		btnCambiarJugador.setActionCommand(CAMBIAR_JUGADOR);
 		btnCambiarJugador.addActionListener(this);
 		add(btnCambiarJugador);
 	}
@@ -70,5 +61,6 @@ public class PanelMenu extends JPanel implements ActionListener {
 			principal.cambiarJugador();
 		}
 	}
+
 	
 }
