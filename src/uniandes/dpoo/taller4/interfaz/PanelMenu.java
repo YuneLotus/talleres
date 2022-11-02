@@ -50,9 +50,9 @@ public class PanelMenu extends JPanel implements ActionListener {
 	}
 	
 	//Métodos
-	public void actionPerformed(ActionEvent pOpcion, int size) {
+	public void actionPerformed(ActionEvent pOpcion) {
 		if(NUEVO.equals(pOpcion.getActionCommand())) {
-			principal.inicializarTablero(size);
+			principal.inicializarTablero();
 		}
 		else if(REINICIAR.equals(pOpcion.getActionCommand())) {
 			principal.reiniciarTablero();
@@ -62,8 +62,6 @@ public class PanelMenu extends JPanel implements ActionListener {
 		}
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-	}
+
+	
 }

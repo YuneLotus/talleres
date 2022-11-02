@@ -96,10 +96,10 @@ public class PanelConfig extends JPanel implements  ActionListener
 		
 		JComboBox<String> lista = new JComboBox<String>(opciones);
 		
-		JPanel listaYTexto = new JPanel(new GridLayout(1,2));
+		JPanel listaYTexto = new JPanel(new GridLayout(1, 2));
 		
-		listaYTexto.add(size, 1, 1);
-		listaYTexto.add(lista, 1, 2);
+		listaYTexto.add(size);
+		listaYTexto.add(lista);
 		listaYTexto.setBackground(Color.BLUE);
 		
 		JPanel config = new JPanel(new BorderLayout());
