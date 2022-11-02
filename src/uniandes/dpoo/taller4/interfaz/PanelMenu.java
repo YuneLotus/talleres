@@ -59,18 +59,15 @@ public class PanelMenu extends JPanel implements ActionListener {
 	}
 	
 	//Métodos
-	public void actionPerformed(ActionEvent pOpcion) {
+	public void actionPerformed(ActionEvent pOpcion, int size) {
 		if(NUEVO.equals(pOpcion.getActionCommand())) {
-			principal.inicializarTablero();
+			principal.inicializarTablero(size);
 		}
 		else if(REINICIAR.equals(pOpcion.getActionCommand())) {
-			principal.reqFuncReiniciar();
-		}
-		else if(TOP_10.equals(pOpcion.getActionCommand())) {
-			principal.reqFuncTop10();
+			principal.reiniciarTablero();
 		}
 		else if(CAMBIAR_JUGADOR.equals(pOpcion.getActionCommand())) {
-			principal.reqFuncCambiarJugador();
+			principal.cambiarJugador();
 		}
 	}
 	
