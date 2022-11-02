@@ -82,7 +82,7 @@ public class PanelTablero extends JPanel implements MouseListener
 		filas = configActual.length;
 		columnas = configActual.length;
 		// son cuadrados
-		tam = (int)(getHeight() / filas);
+		tam = (int)((int)(ventana.getContentPane().getSize().getHeight()) / filas);
 		
 		// dibuja cada recuadro individualmente
 		for (int f=0; f<filas; f++) {

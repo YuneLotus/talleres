@@ -25,8 +25,6 @@ public class PanelConfig extends JPanel implements  ActionListener
 	private static final String Medio = "medio";
 	
 	private static final String Dificil = "dificil";
-
-	private InterfazLuces interfaz;
 	
 	private JComboBox<String> lista;
 	
@@ -128,7 +126,7 @@ public class PanelConfig extends JPanel implements  ActionListener
             fila = filaSeleccionada(tamSeleccionado);
             
             // se supone que 
-            interfaz.inicializarTablero(fila);
+            ventana.inicializarTablero(fila);
         }
        
 	}
@@ -226,13 +224,13 @@ public class PanelConfig extends JPanel implements  ActionListener
 	@Override
 	public void actionPerformed(ActionEvent nivel) {
 		if (Facil.equals(nivel.getActionCommand())) {
-            interfaz.desordenarTablero(5);
+            ventana.desordenarTablero(5);
         }
 		if(Medio.equals(nivel.getActionCommand())) {
-			interfaz.desordenarTablero(10);
+			ventana.desordenarTablero(10);
 		}
 		if(Dificil.equals(nivel.getActionCommand())) {
-			interfaz.desordenarTablero(15);
+			ventana.desordenarTablero(15);
 		}
 		
 	}
