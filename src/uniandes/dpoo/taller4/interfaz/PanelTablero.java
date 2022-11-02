@@ -93,20 +93,18 @@ public class PanelTablero extends JPanel implements MouseListener
 		}
 	}
 	
-	
+	/*
 	public void mousePressed(MouseEvent e)  {   
-		int ultima_fila = 0;
-		int ultima_columna = 0;
 		int click_x = e.getX();   
 		int click_y = e.getY();   
 		int[] casilla = convertirCoordenadasACasilla(click_x, click_y);   
 		cantidades[casilla[0]][casilla[1]]++;   
-		ventana.jugarTablero(casilla[0], casilla[1]);   
+		principal.jugar(casilla[0], casilla[1]);   
 		this.ultima_fila = casilla[0];   
 		this.ultima_columna = casilla[1];   
 		repaint();  
 	} 
-
+	*/  
 
 	
 	private int[] convertirCoordenadasACasilla(int x, int y)  {  

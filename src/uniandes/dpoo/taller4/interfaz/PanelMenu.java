@@ -70,11 +70,5 @@ public class PanelMenu extends JPanel implements ActionListener {
 			principal.cambiarJugador();
 		}
 	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }
