@@ -70,7 +70,7 @@ public class InterfazLuces extends JFrame
 		// Añade los paneles
 		panelConfig = 	new PanelConfig( );
 		panelMenu = 	new PanelMenu( this );
-		panelTablero = 	new PanelTablero( );
+		panelTablero = 	new PanelTablero( this, tablero );
 		panelPuntaje = 	new PanelPuntaje( this );
 		panelTopScores = new PanelTopScores( this, topscores.darRegistros() );
 		
@@ -99,7 +99,7 @@ public class InterfazLuces extends JFrame
 	{
 		remove( panelTablero );
 		
-		panelTablero = new PanelTablero( ); // TODO: definir parámetros
+		panelTablero = new PanelTablero( this, tablero ); // TODO: definir parámetros
 		add( panelTablero, BorderLayout.CENTER );
 		validate( );
 	}
@@ -133,6 +133,14 @@ public class InterfazLuces extends JFrame
 		tablero.reiniciar( );
 	}
 	
+	/**
+	 * Juega en el tablero
+	 */
+	public void jugarTablero (int fila, int columna ) 
+	{
+		tablero.jugar(fila, columna);
+	}
+	
 	
 	/**
 	 * Cierra la aplicación y guarda puntajes
@@ -146,10 +154,8 @@ public class InterfazLuces extends JFrame
 		try {
 			topscores.salvarRecords( savedScores );
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
