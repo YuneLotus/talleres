@@ -18,6 +18,8 @@ public class PanelMenu extends JPanel implements ActionListener {
 	//Atributos
 	private InterfazLuces principal;
 	
+	private PanelConfig config;
+	
 	private JButton btnNuevo;
 	
 	private JButton btnReiniciar;
@@ -49,10 +51,13 @@ public class PanelMenu extends JPanel implements ActionListener {
 		add(btnCambiarJugador);
 	}
 	
+	public void darTam() {
+		config.sizeSeleccionado();
+	}
 	//Métodos
 	public void actionPerformed(ActionEvent pOpcion) {
 		if(NUEVO.equals(pOpcion.getActionCommand())) {
-			principal.inicializarTablero();
+			darTam();
 		}
 		else if(REINICIAR.equals(pOpcion.getActionCommand())) {
 			principal.reiniciarTablero();
