@@ -45,7 +45,7 @@ public class PanelPuntaje extends JPanel
 			panelInfoJugadas.setLayout(new BorderLayout());
 			
 			JPanel panelInfoJugadas1 = new JPanel();
-			panelInfoJugadas1.setLayout(new GridLayout(3, 4));
+			panelInfoJugadas1.setLayout(new GridLayout(1, 2));
 			panelInfoJugadas1.setBorder(new EmptyBorder(5, 0, 0, 0));
 			
 			JLabel etiquetaJugadas = new JLabel("Jugadas: ");
