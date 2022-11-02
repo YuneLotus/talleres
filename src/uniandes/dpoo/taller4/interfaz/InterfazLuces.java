@@ -60,12 +60,10 @@ public class InterfazLuces extends JFrame
 		
 		// crea el primer jugador
 		cambiarJugador( );
-		System.out.println("Nombre: " + this.nombre + "\nPuntaje actual: " + this.puntaje_curr + "\n");
 		
 		// Crea el tablero
-		//tablero = new Tablero( ); // TODO: añadir tamaño del tablero
-		//tablero.desordenar( ); // TODO: poner dificultad
-		//tablero.
+		tablero = new Tablero( 5 ); // TODO: añadir tamaño del tablero
+		tablero.desordenar( 5 ); // TODO: poner dificultad
 		
 		// Crea el top score
 		topscores = new Top10( );
@@ -74,17 +72,17 @@ public class InterfazLuces extends JFrame
 		// Configura la interfaz
 		setLayout( new BorderLayout( ) );
 		// Añade los paneles
-		panelConfig = 	new PanelConfig( );
+		panelConfig = 	new PanelConfig( this );
 		panelMenu = 	new PanelMenu( this );
 		panelTablero = 	new PanelTablero( this, tablero );
 		panelPuntaje = 	new PanelPuntaje( this );
-		panelTopScores = new PanelTopScores( this, topscores.darRegistros() );
+		//panelTopScores = new PanelTopScores( this, topscores.darRegistros() );
 		
 		add( panelConfig,	BorderLayout.NORTH );
 		add( panelMenu	,	BorderLayout.EAST );
 		add( panelTablero,	BorderLayout.CENTER );
 		add( panelPuntaje,	BorderLayout.SOUTH );
-		add( panelTopScores, BorderLayout.WEST );
+		//add( panelTopScores, BorderLayout.WEST );
 		
 		// Configuraciones de ventana
 		setResizable( false );
@@ -117,7 +115,8 @@ public class InterfazLuces extends JFrame
 	 */
 	public void inicializarTablero( int tam ) 
 	{
-		tablero = new Tablero( tam );
+		this.tablero = new Tablero( tam );
+		System.out.println("Tablero inicializado a tamaño " + tam + "\n");
 	}
 	
 	
@@ -127,7 +126,7 @@ public class InterfazLuces extends JFrame
 	 */
 	public void desordenarTablero( int dif )
 	{
-		tablero.desordenar( dif );
+		this.tablero.desordenar( dif );
 	}
 	
 	
@@ -136,7 +135,7 @@ public class InterfazLuces extends JFrame
 	 */
 	public void reiniciarTablero( ) 
 	{
-		tablero.reiniciar( );
+		this.tablero.reiniciar( );
 	}
 	
 	/**
@@ -144,7 +143,7 @@ public class InterfazLuces extends JFrame
 	 */
 	public void jugarTablero (int fila, int columna ) 
 	{
-		tablero.jugar(fila, columna);
+		this.tablero.jugar(fila, columna);
 	}
 	
 	
@@ -155,6 +154,7 @@ public class InterfazLuces extends JFrame
 	{
 		this.nombre = nombre;
 		this.puntaje_curr = 0;
+		System.out.println("Nombre: " + this.nombre + "\nPuntaje actual: " + this.puntaje_curr + "\n");
 	}
 	
 	public void cambiarJugador( ) 

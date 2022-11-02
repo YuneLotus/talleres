@@ -115,7 +115,7 @@ public class PanelTablero extends JPanel implements MouseListener
 	private int[] convertirCoordenadasACasilla(int x, int y)  {  
 		// consigue las dimensiones del tablero
 		int ladoTablero = tablero.darTablero().length;
-		int altoPanelTablero = getHeight();   
+		int altoPanelTablero = getHeight();    // TODO: da tamaño de la ventana?
 		int anchoPanelTablero = getWidth();     
 		
 		// calcula dimensiones de cada casilla

@@ -18,6 +18,7 @@ import javax.swing.JComboBox;
 
 public class PanelConfig extends JPanel implements  ActionListener
 {
+	private InterfazLuces ventana;
 	
 	private static final String Facil = "facil";
 	
@@ -54,10 +55,14 @@ public class PanelConfig extends JPanel implements  ActionListener
 	 * del tablero
 	 * */
 
-	public PanelConfig() {
+	public PanelConfig( InterfazLuces ventana ) {
+		
+		this.ventana = ventana;
+		
+		setLayout( new BorderLayout( ) );
 		
 		JLabel dificultad = new JLabel("Dificultad");
-		dificultad.setForeground(Color.WHITE);
+		dificultad.setForeground(Color.BLACK);
 		
 		JRadioButton facil = new JRadioButton();
 	
@@ -86,12 +91,11 @@ public class PanelConfig extends JPanel implements  ActionListener
 		buttons.add(facil);
 		buttons.add(medio);
 		buttons.add(dificil);
-		buttons.setBackground(Color.BLUE);
 
 		
 		String[] opciones = {"5x5", "6x6", "7x7", "8x8", "9x9","10x10"};
 		JLabel size = new JLabel("Tamaño");
-		size.setForeground(Color.WHITE);
+		size.setForeground(Color.BLACK);
 		
 		
 		JComboBox<String> lista = new JComboBox<String>(opciones);
@@ -100,14 +104,11 @@ public class PanelConfig extends JPanel implements  ActionListener
 		
 		listaYTexto.add(size);
 		listaYTexto.add(lista);
-		listaYTexto.setBackground(Color.BLUE);
 		
-		JPanel config = new JPanel(new BorderLayout());
+		add(listaYTexto, BorderLayout.WEST);
+		add(buttons, BorderLayout.EAST);	
 		
-		config.add(listaYTexto, BorderLayout.WEST);
-		config.add(buttons, BorderLayout.EAST);	
-		config.setBackground(Color.BLUE);
-		
+		setVisible( true );
 	}
 	
 	/** 
