@@ -62,5 +62,13 @@ public class PanelMenu extends JPanel implements ActionListener {
 		}
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+>>>>>>> branch 'main' of https://github.com/DPOO-S04-202220-G01/Taller4.git
 	
 }
