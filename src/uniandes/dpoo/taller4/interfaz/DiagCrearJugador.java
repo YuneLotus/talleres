@@ -106,14 +106,14 @@ public class DiagCrearJugador extends JDialog implements ActionListener
         botonAceptar.addActionListener( this );
         panelBotones.add( botonAceptar );
 	}
-	
+		
 	public void actionPerformed( ActionEvent pEvento ) 
 	{
 		String comando = pEvento.getActionCommand();
 		
 		if ( comando.equals( ACEPTAR ) ) {
 			System.out.println("ACEPTAR clickeado\n");
-			nombre = txtNombre.getText( );
+			nombre = txtNombre	.getText( );
 			
 			if (nombre == null || nombre.equals( "" )) { }
 			else 

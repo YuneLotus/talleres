@@ -1,9 +1,4 @@
-/**
- * Taller 4
- * Álvaro Bacca			202121869
- * Silvana Sandoval		20212
- * Gabriela Soler		20212
- */
+
 package uniandes.dpoo.taller4.interfaz;
 
 import java.awt.*;

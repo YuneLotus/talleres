@@ -37,8 +37,3 @@ public class PanelTopScores extends JPanel
 	
 
 }
-
-/*Fuentes
- * http://www.java2s.com/example/java/swing/fill-collection-to-jlist.html
- * https://docs.oracle.com/cd/E17802_01/j2se/javase/6/jcp/beta/apidiffs/javax/swing/JList.html#:~:text=To%20create%20a%20scrolling%20list,getViewport().
- */

@@ -96,7 +96,7 @@ public class PanelConfig extends JPanel implements  ActionListener
 		size.setForeground(Color.BLACK);
 		
 		
-		JComboBox<String> lista = new JComboBox<String>(opciones);
+		lista = new JComboBox<String>(opciones);
 		
 		JPanel listaYTexto = new JPanel(new GridLayout(1, 2));
 		
@@ -236,13 +236,4 @@ public class PanelConfig extends JPanel implements  ActionListener
 	}
 	
 }
-/* Sources:
- * https://stackoverflow.com/questions/15882886/jlabel-color-change
- * https://www.geeksforgeeks.org/jradiobutton-java-swing/
- * https://stackoverflow.com/questions/18941840/add-buttongroup-to-jpanel
- * https://docs.oracle.com/javase/tutorial/uiswing/layout/border.html
- * https://www.geeksforgeeks.org/java-swing-jcombobox-examples/
- * https://examples.javacodegeeks.com/desktop-java/swing/jradiobutton/get-selected-jradiobutton-from-buttongroup/#:~
- * :text=Use%20ButtonGroup.,to%20get%20the%20user's%20selection.
- */
-  
+
